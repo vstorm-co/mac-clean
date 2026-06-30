@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>mac-clean</title>
+    <link rel="stylesheet" href="/app.css" />
+    <script>
+      window.MAC_CLEAN_TOKEN = "%%TOKEN%%";
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">🧹</span>
+        <div>
+          <h1>mac-clean</h1>
+          <p class="tagline">Scan · review · you approve every deletion</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="split">
+      <section class="card overview">
+        <div class="card-head">
+          <h2>Storage</h2>
+          <span id="disk-summary" class="muted">Reading disk…</span>
+        </div>
+        <div class="disk-bar"><div id="disk-used" class="disk-used"></div></div>
+        <div id="disk-legend" class="disk-legend"></div>
+        <div id="breakdown" class="breakdown"></div>
+      </section>
+
+      <section class="card cleanup">
+        <div class="card-head">
+          <div class="head-title">
+            <h2>Cleanup</h2>
+            <p id="scan-status" class="muted">Starting scan…</p>
+          </div>
+          <div class="head-right">
+            <div class="found">
+              <span id="found-value">0 B</span>
+              <small>found to review</small>
+            </div>
+            <button id="options-btn" class="icon-btn" title="Scan options" aria-label="Scan options">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+              </svg>
+            </button>
+            <button id="rescan-btn" class="icon-btn" title="Rescan" aria-label="Rescan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12a9 9 0 1 1-2.64-6.36" />
+                <path d="M21 3v6h-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="options-panel" class="options-panel" hidden>
+          <div class="options-grid">
+            <label>Hide items smaller than (MB)
+              <input id="opt-min" type="number" min="0" step="0.1" value="1" />
+            </label>
+            <label>Old downloads older than (days)
+              <input id="opt-days" type="number" min="0" value="30" />
+            </label>
+            <label>Large files at least (MB)
+              <input id="opt-large" type="number" min="1" value="200" />
+            </label>
+            <label>Large folders at least (MB)
+              <input id="opt-folder" type="number" min="1" value="300" />
+            </label>
+            <label>Duplicates at least (MB)
+              <input id="opt-dup" type="number" min="1" value="5" />
+            </label>
+          </div>
+          <button id="apply-options" class="primary small">Apply &amp; rescan</button>
+        </div>
+
+        <div id="results"></div>
+      </section>
+    </main>
+
+    <footer id="action-bar" class="action-bar" hidden>
+      <div class="action-info">
+        <strong id="selected-count">0 items</strong>
+        <span id="selected-size" class="muted"></span>
+      </div>
+      <div class="action-buttons">
+        <button id="trash-btn" class="primary">Move to Trash</button>
+        <button id="delete-btn" class="ghost-danger">Delete permanently…</button>
+      </div>
+    </footer>
+
+    <div id="toast" class="toast" hidden></div>
+    <script src="/app.js"></script>
+  </body>
+</html>

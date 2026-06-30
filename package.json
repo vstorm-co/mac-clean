@@ -1,0 +1,41 @@
+{
+  "name": "mac-clean",
+  "version": "0.1.0",
+  "description": "Twoje własne, bezpieczne narzędzie do analizy i czyszczenia dysku na macOS. Skan -> przegląd w GUI -> Ty zatwierdzasz usuwanie. Zero zależności runtime.",
+  "type": "module",
+  "bin": {
+    "mac-clean": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "public",
+    "scripts",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json && node dist/cli.js",
+    "start": "node dist/cli.js",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [
+    "macos",
+    "cleanup",
+    "disk",
+    "cache",
+    "cli",
+    "gui"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
