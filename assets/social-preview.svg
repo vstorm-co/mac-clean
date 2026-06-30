@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="82%" cy="8%" r="60%">
+      <stop offset="0%" stop-color="#22e07a" stop-opacity="0.38"/>
+      <stop offset="45%" stop-color="#1f5c3f" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0a0f0c" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- background -->
+  <rect width="1280" height="640" fill="#0a0f0c"/>
+  <rect width="1280" height="640" fill="url(#grid)"/>
+  <rect width="1280" height="640" fill="url(#glow)"/>
+
+  <!-- top: logo tile + org -->
+  <rect x="80" y="74" width="66" height="66" rx="16" fill="url(#brand)"/>
+  <text x="113" y="120" font-family="'SF Mono','Menlo',monospace" font-size="34" font-weight="700" fill="#06140c" text-anchor="middle">&gt;_</text>
+  <text x="166" y="116" font-size="27" font-weight="600" fill="#c4d8cc" letter-spacing="0.5">vstorm-co</text>
+
+  <!-- title -->
+  <text x="80" y="270" font-family="'SF Mono','Menlo',monospace" font-size="78" font-weight="700" fill="#ffffff" letter-spacing="-1">mac-clean</text>
+  <rect x="82" y="292" width="118" height="6" rx="3" fill="url(#brand)"/>
+
+  <!-- tagline -->
+  <text x="80" y="356" font-size="37" font-weight="600" fill="#f1fbf4">An open-source <tspan fill="#4ade80">Mac cleaner</tspan> you can actually read.</text>
+
+  <!-- sub -->
+  <text x="80" y="404" font-size="25" font-weight="400" fill="#9fbaab">Scan, review, and <tspan fill="#4ade80" font-weight="700">you approve</tspan> every deletion. Nothing leaves your machine.</text>
+
+  <!-- feature pills -->
+  <g font-size="24" font-weight="600">
+    <!-- Auditable (highlighted differentiator) -->
+    <rect x="80" y="470" width="166" height="54" rx="27" fill="#22e07a" fill-opacity="0.16" stroke="#4ade80" stroke-opacity="0.9" stroke-width="1.5"/>
+    <text x="163" y="505" fill="#7df0aa" text-anchor="middle">Auditable</text>
+
+    <rect x="262" y="470" width="222" height="54" rx="27" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.5"/>
+    <text x="373" y="505" fill="#d3e6da" text-anchor="middle">Trash by default</text>
+
+    <rect x="500" y="470" width="150" height="54" rx="27" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.5"/>
+    <text x="575" y="505" fill="#d3e6da" text-anchor="middle">Local only</text>
+
+    <rect x="666" y="470" width="158" height="54" rx="27" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.5"/>
+    <text x="745" y="505" fill="#d3e6da" text-anchor="middle">Zero deps</text>
+
+    <rect x="840" y="470" width="296" height="54" rx="27" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.5"/>
+    <text x="988" y="505" fill="#d3e6da" text-anchor="middle">You approve everything</text>
+  </g>
+
+  <!-- footer -->
+  <text x="80" y="598" font-family="'SF Mono','Menlo',monospace" font-size="22" fill="#6f8579">github.com/vstorm-co/mac-clean</text>
+  <text x="1200" y="598" font-size="22" fill="#6f8579" text-anchor="end">MIT · macOS · zero deps</text>
+</svg>
