@@ -80,7 +80,7 @@ recoverable.
 Requires **Node.js 18+** and **macOS**.
 
 ```bash
-git clone <your-repo> mac-clean && cd mac-clean
+git clone https://github.com/vstorm-co/mac-clean.git && cd mac-clean
 npm install
 npm run build
 npm link          # makes the `mac-clean` command available globally
